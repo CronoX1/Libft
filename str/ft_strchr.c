@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	while (s[i])
 	{
-		if ((int) s[i] == c)
+		if (s[i] == (c + 256) % 256)
 			return ((char *) &s[i]);
 		++i;
 	}

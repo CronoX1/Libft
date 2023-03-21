@@ -25,5 +25,7 @@ extern int		ft_toupper(int c);
 extern int		ft_strncmp(const char *s1, const char *s2, size_t n);
 extern char		*ft_strnstr(const char *s1, const char *s2, size_t n);
 extern char		*ft_strchr(const char *s, int c);
+extern size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+extern size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 
 #endif

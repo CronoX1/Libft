@@ -1,13 +1,20 @@
 #include "../libft.h"
 #include <stdio.h>
-#include <string.h>
+#include </usr/include/bsd/string.h>
+
 int	main(void)
 {
+	char s1[50] = "";
+	char s2[50] = "";
 	printf("ft_atoi vale %i\n", ft_atoi("945"));
 	printf("ft_strncmp vale %i\n", ft_strncmp("test\200", "test\0", 6));
 	printf("strncmp vale %i\n", strncmp("test\200", "test\0", 6));
 	printf("ft_strlen vale %zu\n", ft_strlen("hola"));
-	printf("ft_strnstr vale %s\n", ft_strnstr("", "coucou", -1));
-	printf("ft_strnstr vale %s\n", strnstr("", "coucou", -1));
-	printf("ft_strchr vale %s\n", ft_strchr("hola como estas", 'c'));
+	printf("ft_strnstr vale %s\n", ft_strnstr("e", "Hola como estas", 5));
+	printf("ft_strchr vale %s\n", ft_strchr("Hola como estas", 'e'));
+	printf("strchr vale %s\n", strchr("Hola como estas", 'e'));
+	printf("ft_strlcpy vale %lu\n", ft_strlcpy(s1, "hola mundo", 0));
+	printf("strlcpy vale %li\n", strlcpy(s2, "hola mundo", 0));
+	printf("s1 vale %s\n", s1);
+	printf("s2 vale %s\n", s2);
 }
