@@ -21,4 +21,6 @@ int	main(void)
 	memcpy(s2, "Hola como estas", 15);
 	printf("s1 vale %s\n", s1);
 	printf("s2 vale %s\n", s2);
+	printf("ft_memcmp vale %i\n", ft_memcmp("hola", "hole", 4));
+	printf("memcmp vale %i\n", memcmp("hola", "hole", 4));
 }
