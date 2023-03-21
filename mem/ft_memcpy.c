@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aruiz-al <aruiz-al@student.42madrid>       +#+  +:+       +#+        */
+/*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 15:44:43 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/03/19 14:48:14 by aruiz-al         ###   ########.fr       */
+/*   Created: 2023/03/21 15:45:13 by aruiz-al          #+#    #+#             */
+/*   Updated: 2023/03/21 21:14:19 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "../libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
+	char	*new_src;
+	char	*new_dest;
 
 	i = 0;
-	if (c == '\0')
+	new_src = (char *)src;
+	new_dest = dest;
+	while (i < n)
 	{
-		while (s[i] != '\0')
-			++i;
-		return ((char *) &s[i]);
-	}
-	while (s[i] != '\0')
-	{
-		if (s[i] == (c + 256) % 256)
-			return ((char *) &s[i]);
+		new_dest[i] = new_src[i];
 		++i;
 	}
-	return (0);
+	return (new_dest);
 }
