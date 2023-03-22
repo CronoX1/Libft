@@ -28,6 +28,7 @@ SRCs = etc/ft_atoi.c	\
 	   to/ft_toupper.c	\
 	   mem/ft_memcpy.c	\
 	   mem/ft_memcmp.c	\
+	   mem/ft_memchr.c	\
 
 
 OBJs = $(SRCs:.c=.o)
