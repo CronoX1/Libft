@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:39:26 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/03/17 14:32:18 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/03/23 20:05:03 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*us1;
-	unsigned char	*us2;
+	const unsigned char	*new_s1;
+	const unsigned char	*new_s2;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	us1 = (unsigned char *)s1;
-	us2 = (unsigned char *)s2;
-	while (us1[i] == us2[i] && (us1[i] != 0 || us2[i] != 0) && (i < (n - 1)))
+	new_s1 = (const unsigned char *)s1;
+	new_s2 = (const unsigned char *)s2;
+	while (n > 0 && (*new_s1 || *new_s2))
 	{
-		i++;
+		if (*new_s1 != *new_s2)
+			return (*new_s1 - *new_s2);
+		++new_s1;
+		++new_s2;
+		--n;
 	}
-	return (us1[i] - us2[i]);
+	return (0);
 }
