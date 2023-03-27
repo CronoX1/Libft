@@ -9,6 +9,9 @@ int	main(void)
 	char s2[50] = "";
 	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
 	char s[] = {0, 1, 2 ,3 ,4 ,5};
+	int myarray[10];
+	int value = 0;
+	int i = 0;
 
 	printf("ft_atoi vale %i\n", ft_atoi("945"));
 	printf("ft_strncmp vale %i\n", ft_strncmp("abc", "abc", 7));
@@ -32,4 +35,18 @@ int	main(void)
 	printf("memcmp vale %i\n", memcmp("ho\0la", "ho\200le", 4));
 	printf("ft_memchr vale %p\n", ft_memchr(s, 0, 0));
 	printf("memchr vale %p\n", memchr(s, 0, 0));
+	printf("ft_memset vale %p\n", ft_memset(myarray, value, 10));
+	while (i < 10)
+	{
+		printf("Valor de myarray[%d]: %d\n", i, myarray[i]);
+		++i;
+	}
+	i = 0;
+	printf("memset vale %p\n", memset(myarray, value, 10));
+	while (i < 10)
+	{
+
+		printf("Valor de myarray[%d]: %d\n", i, myarray[i]);
+		++i;
+	}
 }
