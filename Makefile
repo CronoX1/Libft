@@ -11,6 +11,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 
 SRCs = etc/ft_atoi.c	\
+	   etc/ft_bzero.c	\
 	   is/ft_isalnum.c	\
 	   is/ft_isalpha.c	\
 	   is/ft_isascii.c	\
@@ -29,6 +30,7 @@ SRCs = etc/ft_atoi.c	\
 	   mem/ft_memcpy.c	\
 	   mem/ft_memcmp.c	\
 	   mem/ft_memchr.c	\
+	   mem/ft_memset.c	\
 
 
 OBJs = $(SRCs:.c=.o)
