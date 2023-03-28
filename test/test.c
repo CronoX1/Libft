@@ -13,6 +13,8 @@ int	main(void)
 	int value = 0;
 	int i = 0;
 	int *ptr;
+	const char *s3 = "Hola mundo!";
+	char *s4 = ft_strdup(s3);
 
 	printf("ft_atoi vale %i\n", ft_atoi("945"));
 	printf("ft_strncmp vale %i\n", ft_strncmp("abc", "abc", 7));
@@ -58,4 +60,5 @@ int	main(void)
 		printf("El valor de p es: %d\n", ptr[i]);
 		++i;
 	}
+	printf("s4 vale: %s\n", s4);
 }
