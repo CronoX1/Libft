@@ -26,6 +26,7 @@ SRCs = etc/ft_atoi.c	\
 	   str/ft_strlcat.c	\
 	   str/ft_strncmp.c	\
 	   str/ft_strrchr.c	\
+	   str/ft_strdup.c	\
 	   to/ft_tolower.c	\
 	   to/ft_toupper.c	\
 	   mem/ft_memcpy.c	\
