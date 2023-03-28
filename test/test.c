@@ -12,6 +12,7 @@ int	main(void)
 	int myarray[10];
 	int value = 0;
 	int i = 0;
+	int *ptr;
 
 	printf("ft_atoi vale %i\n", ft_atoi("945"));
 	printf("ft_strncmp vale %i\n", ft_strncmp("abc", "abc", 7));
@@ -47,6 +48,14 @@ int	main(void)
 	{
 
 		printf("Valor de myarray[%d]: %d\n", i, myarray[i]);
+		++i;
+	}
+	ptr = (int *)ft_calloc(10, sizeof(int));
+	printf("ft_calloc vale %p\n", ptr);
+	i = 0;
+	while (i < 11)
+	{
+		printf("El valor de p es: %d\n", ptr[i]);
 		++i;
 	}
 }
