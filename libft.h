@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:48:30 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/03/27 12:25:37 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/03/28 10:06:06 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -33,5 +33,6 @@ extern int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 extern void		*ft_memchr(const void *str, int c, size_t n);
 extern void		*ft_memset(void *ptr, int value, size_t num);
 extern void		*ft_bzero(void *s, size_t num);
+extern void		*ft_memmove(void *dets, const void *src, size_t n);
 
 #endif
