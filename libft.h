@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:48:30 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/03/28 16:38:35 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:16:56 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -37,5 +37,6 @@ extern void		*ft_bzero(void *s, size_t num);
 extern void		*ft_memmove(void *dets, const void *src, size_t n);
 extern void		*ft_calloc(size_t num, size_t size);
 char			*ft_strdup(const char *str);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

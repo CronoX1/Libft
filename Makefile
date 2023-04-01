@@ -34,6 +34,7 @@ SRCs = etc/ft_atoi.c	\
 	   mem/ft_memchr.c	\
 	   mem/ft_memset.c	\
 	   mem/ft_memmove.c	\
+	   str/ft_substr.c	\
 
 
 OBJs = $(SRCs:.c=.o)
