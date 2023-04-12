@@ -6,15 +6,15 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:04:22 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/12 12:57:34 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/12 14:44:17 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *new_s;
+	char	*new_s;
 
 	if (len <= 0 || start > ft_strlen(s))
 		return (ft_strdup(""));
