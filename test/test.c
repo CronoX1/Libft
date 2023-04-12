@@ -1,6 +1,7 @@
 #include "../libft.h"
 #include <stdio.h>
-#include </usr/include/bsd/string.h>
+//#include </usr/include/bsd/string.h>
+#include <string.h>
 #include <unistd.h>
 
 int	main(void)
@@ -15,6 +16,8 @@ int	main(void)
 	int *ptr;
 	const char *s3 = "Hola mundo!";
 	char *s4 = ft_strdup(s3);
+	char *s5 = "";
+	char *s6 = "";
 
 	printf("ft_atoi vale %i\n", ft_atoi("945"));
 	printf("ft_strncmp vale %i\n", ft_strncmp("abc", "abc", 7));
@@ -62,4 +65,5 @@ int	main(void)
 	}
 	printf("s4 vale: %s\n", s4);
 	printf("ft_substr vale: %s\n", ft_substr("", 0, 0));
+	printf("ft_strjoin vale: %s\n", ft_strjoin(s5, s6));
 }
