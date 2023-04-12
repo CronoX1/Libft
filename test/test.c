@@ -61,5 +61,5 @@ int	main(void)
 		++i;
 	}
 	printf("s4 vale: %s\n", s4);
-	printf("ft_substr vale: %s\n", ft_substr("", 2, 5));
+	printf("ft_substr vale: %s\n", ft_substr("", 0, 0));
 }
