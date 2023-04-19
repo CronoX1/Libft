@@ -6,24 +6,25 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:41:52 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/19 12:17:58 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:19:07 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*end(char *new_s1, char const *new_set) // SEG. FAULT
+char	*end(char *new_s1, char const *new_set)
 {
-	int	i;
-	int	z;
+	int		i;
+	int		z;
+	char	*str;
 
 	i = (int) ft_strlen(new_s1);
 	z = 0;
-	while (i >= 0)
+	while (i > 0)
 	{
 		while (new_set[z])
 		{
-			if (new_set[z] == new_s1[i])
+			if (new_set[z] == new_s1[i - 1])
 			{
 				z = 0;
 				break ;
@@ -34,8 +35,9 @@ char	*end(char *new_s1, char const *new_set) // SEG. FAULT
 			break ;
 		--i;
 	}
-	new_s1[i + 1] = '\0';
-	return ((char *) new_s1);
+	str = ft_calloc(i + 1, sizeof(char));
+	ft_strlcpy(str, new_s1, i + 1);
+	return (str);
 }
 
 char	*begin(char const *new_s1, char const *new_set)
@@ -60,7 +62,7 @@ char	*begin(char const *new_s1, char const *new_set)
 			break ;
 		++i;
 	}
-	return (end((char *) new_s1, new_set));
+	return (end((char *) &new_s1[i], new_set));
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
