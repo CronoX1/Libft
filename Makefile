@@ -28,6 +28,8 @@ SRCs = etc/ft_atoi.c	\
 	   str/ft_strrchr.c	\
 	   str/ft_strdup.c	\
 	   str/ft_strjoin.c	\
+	   str/ft_substr.c	\
+	   str/ft_strtrim.c	\
 	   to/ft_tolower.c	\
 	   to/ft_toupper.c	\
 	   mem/ft_memcpy.c	\
@@ -35,8 +37,6 @@ SRCs = etc/ft_atoi.c	\
 	   mem/ft_memchr.c	\
 	   mem/ft_memset.c	\
 	   mem/ft_memmove.c	\
-	   str/ft_substr.c	\
-
 
 OBJs = $(SRCs:.c=.o)
 

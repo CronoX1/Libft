@@ -30,7 +30,6 @@ int	main(void)
 	printf("strrchr vale %s\n", strrchr("Hola como estas", '\0'));
 	printf("ft_strlcpy vale %lu\n", ft_strlcpy(s1, "lorem ipsum", 3));
 	printf("s1 vale %s\n", s1);
-	printf("strlcpy vale %li\n", strlcpy(s2, "lorem ipsum", 3));
 	printf("s2 vale %s\n", s2);
 	printf("memcpy vale %p\n", memcpy(s2, "Ho\200la", 4));
 	printf("ft_memcpy vale %p\n", ft_memcpy(s1, "ho\200la", 4));
@@ -66,4 +65,5 @@ int	main(void)
 	printf("s4 vale: %s\n", s4);
 	printf("ft_substr vale: %s\n", ft_substr("", 0, 0));
 	printf("ft_strjoin vale: %s\n", ft_strjoin(s5, s6));
+	printf("ft_strtrim vale: %s\n", ft_strtrim("    hola mundo", "olah "));
 }
