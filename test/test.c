@@ -1,6 +1,6 @@
 #include "../libft.h"
 #include <stdio.h>
-//#include </usr/include/bsd/string.h>
+#include </usr/include/bsd/string.h>
 #include <string.h>
 #include <unistd.h>
 
@@ -66,4 +66,11 @@ int	main(void)
 	printf("ft_substr vale: %s\n", ft_substr("", 0, 0));
 	printf("ft_strjoin vale: %s\n", ft_strjoin(s5, s6));
 	printf("ft_strtrim vale: %s\n", ft_strtrim("tyjHola mundotyj", "jty"));
+	char **split = ft_split("hola mundo   esto es una frase", ' ');
+	i = 0;
+	while (split[i])
+	{
+		printf("ft_split vale: %s\n", split[i]);
+		++i;
+	}
 }

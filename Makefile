@@ -13,6 +13,7 @@ CFLAGS = -Wall -Wextra -Werror
 SRCs = etc/ft_atoi.c	\
 	   etc/ft_bzero.c	\
 	   etc/ft_calloc.c	\
+	   etc/ft_split.c	\
 	   is/ft_isalnum.c	\
 	   is/ft_isalpha.c	\
 	   is/ft_isascii.c	\
