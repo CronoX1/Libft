@@ -44,6 +44,7 @@ SRCs = etc/ft_atoi.c	\
 	   fd/ft_putchar_fd.c	\
 	   fd/ft_putstr_fd.c	\
 	   fd/ft_putnbr_fd.c	\
+	   fd/ft_putendl_fd.c	\
 
 OBJs = $(SRCs:.c=.o)
 
