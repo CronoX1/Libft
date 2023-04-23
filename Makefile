@@ -32,6 +32,8 @@ SRCs = etc/ft_atoi.c	\
 	   str/ft_strjoin.c	\
 	   str/ft_substr.c	\
 	   str/ft_strtrim.c	\
+	   str/ft_strmapi.c	\
+	   str/ft_striteri.c	\
 	   to/ft_tolower.c	\
 	   to/ft_toupper.c	\
 	   mem/ft_memcpy.c	\

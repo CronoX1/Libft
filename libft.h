@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:48:30 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/23 11:36:26 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/23 13:16:25 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -42,5 +42,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
