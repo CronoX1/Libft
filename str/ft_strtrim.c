@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:41:52 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/19 15:19:07 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/23 11:38:47 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*end(char *new_s1, char const *new_set)
 		--i;
 	}
 	str = ft_calloc(i + 1, sizeof(char));
+	if (str == NULL)
+		return (NULL);
 	ft_strlcpy(str, new_s1, i + 1);
 	return (str);
 }
