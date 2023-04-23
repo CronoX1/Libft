@@ -3,6 +3,7 @@
 //#include </usr/include/bsd/string.h>
 #include <string.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 int	main(void)
 {
@@ -74,4 +75,10 @@ int	main(void)
 		++i;
 	}
 	printf("ft_itoa vale: %s\n", ft_itoa(-123));
+	int fd = open("archivo.txt", O_RDWR);
+	ft_putchar_fd('c', fd);
+	ft_putstr_fd("\nHola caracola\n", fd);
+	ft_putnbr_fd(-2147483648, fd);
+	ft_putendl_fd("Despues de esto, deberia haber un salto de linea", fd);
+	ft_putnbr_fd(42, fd);
 }
