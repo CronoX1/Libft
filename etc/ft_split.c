@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 10:35:41 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/21 11:02:43 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/23 12:00:29 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,3 @@ char	**ft_split(char const *s, char c)
 	set_final_item(strings, i_final_array);
 	return (strings);
 }
-
