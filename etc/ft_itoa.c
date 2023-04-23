@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 12:05:11 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/23 11:34:59 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/23 12:00:06 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,23 @@ int	ft_intlen(int n)
 	return (i);
 }
 
+char	*result_number(char *number, int n, int len)
+{
+	if (n < 0)
+	{
+		n = n * -1;
+		number[0] = '-';
+	}
+	number[len] = '\0';
+	while (n != 0)
+	{
+		number[len - 1] = (n % 10) + '0';
+		n = n / 10;
+		--len;
+	}
+	return (number);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*number;
@@ -41,26 +58,13 @@ char	*ft_itoa(int n)
 
 	len = ft_intlen(n);
 	number = ft_calloc(len + 1, sizeof(char));
+	if (number == NULL)
+		return (NULL);
 	if (n == -2147483648)
 		ft_strlcpy(number, "-2147483648", 12);
 	else if (n == 0)
 		ft_strlcpy(number, "0", 2);
 	else
-	{
-		if (!number)
-			return (NULL);
-		if (n < 0)
-		{
-			n = n * -1;
-			number[0] = '-';
-		}
-		number[len] = '\0';
-		while (n != 0)
-		{
-			number[len - 1] = (n % 10) + '0';
-			n = n / 10;
-			--len;
-		}
-	}
+		number = result_number(number, n, len);
 	return (number);
 }
