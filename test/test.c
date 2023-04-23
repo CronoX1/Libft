@@ -1,6 +1,6 @@
 #include "../libft.h"
 #include <stdio.h>
-#include </usr/include/bsd/string.h>
+//#include </usr/include/bsd/string.h>
 #include <string.h>
 #include <unistd.h>
 
@@ -73,4 +73,5 @@ int	main(void)
 		printf("ft_split vale: %s\n", split[i]);
 		++i;
 	}
+	printf("ft_itoa vale: %s\n", ft_itoa(-123));
 }
