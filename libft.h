@@ -6,13 +6,14 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:48:30 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/23 13:16:25 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/23 15:21:29 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 extern int		ft_atoi(const char *nptr);
 extern int		ft_isalnum(int c);
@@ -44,5 +45,8 @@ char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *c, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
