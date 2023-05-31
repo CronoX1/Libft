@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 10:35:41 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/23 12:00:29 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/05/31 20:09:01 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,36 +28,37 @@ static int	number_of_words(char const *s, char c)
 	return (n);
 }
 
-void	set_final_item(char **strings, int index)
+static char	*get_next_word(char const *s, char c, int *i)
 {
-	char	*ptrnull;
+	char	*word;
+	int		start;
+	int		len;
 
-	ptrnull = NULL;
-	strings[index] = ptrnull;
+	while (s[*i] && s[*i] == c)
+		(*i)++;
+	start = *i;
+	while (s[*i] && s[*i] != c)
+		(*i)++;
+	len = *i - start;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	ft_strlcpy(word, s + start, len + 1);
+	return (word);
 }
 
-void	set_strings(char const *s, char c, char **strings, int	*i_final_array)
+static char	**free_all(char **strings)
 {
 	int	i;
-	int	start;
-	int	len;
-	int	ci_final_array;
 
-	ci_final_array = *i_final_array;
 	i = 0;
-	while (s[i])
+	while (strings[i])
 	{
-		if ((s[i] != c) && (i == 0 || s[i - 1] == c))
-			start = i;
-		if ((s[i] != c) && (s[i + 1] == '\0' || s[i + 1] == c))
-		{
-			len = (i - start) + 1;
-			strings[ci_final_array] = ft_substr(s, start, len);
-			ci_final_array++;
-		}
-		i++;
+		free(strings[i]);
+		++i;
 	}
-	*i_final_array = ci_final_array;
+	free(strings);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -65,6 +66,7 @@ char	**ft_split(char const *s, char c)
 	int		words_number;
 	char	**strings;
 	int		i_final_array;
+	int		i;
 
 	if (!s)
 		return (NULL);
@@ -73,7 +75,14 @@ char	**ft_split(char const *s, char c)
 	if (strings == NULL)
 		return (NULL);
 	i_final_array = 0;
-	set_strings(s, c, strings, &i_final_array);
-	set_final_item(strings, i_final_array);
+	i = 0;
+	while (i_final_array < words_number)
+	{
+		strings[i_final_array] = get_next_word(s, c, &i);
+		if (!strings[i_final_array])
+			return (free_all(strings));
+		++i_final_array;
+	}
+	strings[i_final_array] = NULL;
 	return (strings);
 }
