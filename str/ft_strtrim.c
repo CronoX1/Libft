@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:41:52 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/04/23 12:38:22 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/04/23 21:19:09 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,8 @@ int	get_i(char *new_s1, char const *new_set)
 char	*end(char *new_s1, char const *new_set)
 {
 	int		i;
-	int		z;
 	char	*str;
 
-	z = 0;
 	i = get_i(new_s1, new_set);
 	str = ft_calloc(i + 1, sizeof(char));
 	if (str == NULL)
